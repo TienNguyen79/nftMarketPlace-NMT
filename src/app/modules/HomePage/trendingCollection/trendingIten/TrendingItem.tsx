@@ -23,8 +23,8 @@ const TrendingItem = ({ className = '', data }: { className?: string; data?: any
         className="trendItem-bigImg"
       ></Image>
       <div className="trendItem-boxImg">
-        {data.nftP.length > 0 &&
-          data.nftP.slice(0, 2).map((item: any) => {
+        {data?.nftP?.length > 0 &&
+          data?.nftP?.slice(0, 2).map((item: any) => {
             return (
               <Image
                 key={item.id}
@@ -33,7 +33,7 @@ const TrendingItem = ({ className = '', data }: { className?: string; data?: any
               ></Image>
             );
           })}
-        {data.nftP.length > 2 && data.nftP.length !== 3 && (
+        {data?.nftP?.length > 2 && data.nftP.length !== 3 && (
           <div className="trendItem-moreNft">{data.nftP.length - 3}+</div>
         )}
 

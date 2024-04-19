@@ -33,7 +33,7 @@ const CollectionPage = () => {
         </Title>
 
         <div className="CollectionPage-container">
-          {results.length > 0 &&
+          {results?.length > 0 &&
             results.map((item) => (
               <Link key={item.id} style={{ textDecoration: 'none' }} to={`/nft/${item.id}`}>
                 <NftItem data={item} bgC="bg3b"></NftItem>

@@ -49,8 +49,8 @@ const RankingPage = () => {
               </tr>
             </thead>
             <tbody>
-              {Uranking.results.length > 0 &&
-                Uranking.results.map((item, index) => (
+              {Uranking?.results?.length > 0 &&
+                Uranking?.results?.map((item, index) => (
                   <tr key={item.id}>
                     <td className='Ranking-id"'>
                       <div className="Ranking-id">{index + 1}</div>

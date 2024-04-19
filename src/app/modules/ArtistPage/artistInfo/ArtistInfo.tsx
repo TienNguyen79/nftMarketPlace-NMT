@@ -42,7 +42,7 @@ const ArtistInfo = ({ data }: { data: any }) => {
         <div className="ArtistInfo-smallBox">
           <div>
             <TextBold className="size28 ArtistInfo-quantity">
-              {data?.eth.toString().length >= 5 ? convertEth(data?.eth) + 'K+' : data?.eth}
+              {data?.eth.toString()?.length >= 5 ? convertEth(data?.eth) + 'K+' : data?.eth}
             </TextBold>
             <Content className="size22 ArtistInfo-label">Volume</Content>
           </div>

@@ -20,7 +20,7 @@ const NftHighlight = () => {
   const { results } = useSelector((state: RootState) => state.nftSlice.dataAllNft);
 
   const maxViewElement =
-    results.length > 0 &&
+    results?.length > 0 &&
     results.reduce((max, current) => (max.view > current.view ? max : current));
 
   return (

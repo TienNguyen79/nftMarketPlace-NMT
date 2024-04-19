@@ -131,8 +131,8 @@ const MyNftsPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {results.length > 0 &&
-                  results.map((item, idnex) => {
+                {results?.length > 0 &&
+                  results?.map((item, idnex) => {
                     // if (item.user.id === dataUser?.id) {
                     return (
                       <tr key={item.id}>
@@ -202,7 +202,7 @@ const MyNftsPage = () => {
         </div>
 
         <div className="MyNfts-table--mobile ">
-          {results.length > 0 &&
+          {results?.length > 0 &&
             results.map((item, index) => (
               <div
                 // to={`/nft/${item.id}`}

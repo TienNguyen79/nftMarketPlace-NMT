@@ -36,7 +36,7 @@ const DiscoverNFTs = () => {
         </Button>
       </div>
       <div className="DiscoverNFTs-box">
-        {results.length > 0 &&
+        {results?.length > 0 &&
           results.slice(2, 8).map((result) => (
             <Link key={result.id} style={{ textDecoration: 'none' }} to={`/nft/${result.id}`}>
               <DiscoverNFTItem data={result}></DiscoverNFTItem>

@@ -72,7 +72,7 @@ const NftPage = () => {
           </div>
           {/* item?.user?.id === results?.user?.id && */}
           <div className="NftPage-moreNft-collection">
-            {resultAll.length > 0 &&
+            {resultAll?.length > 0 &&
               resultAll.slice(0, 6).map((item) => {
                 if (item?.id !== results?.id) {
                   return (

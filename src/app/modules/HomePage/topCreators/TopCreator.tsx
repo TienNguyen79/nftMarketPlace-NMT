@@ -36,8 +36,8 @@ const TopCreator = () => {
         </Button>
       </div>
       <div className="topCreator-box">
-        {Uranking.results.length > 0 &&
-          Uranking.results.slice(0, 4).map((item, index) => (
+        {Uranking?.results?.length > 0 &&
+          Uranking?.results?.slice(0, 4).map((item, index) => (
             <Link key={item.id} style={{ textDecoration: 'none' }} to={`/artist/${item.id}`}>
               <TopCreatorItem data={item} index={index}></TopCreatorItem>
             </Link>

@@ -117,7 +117,7 @@ const MarketPlace = () => {
         <LayoutOption>
           <div className={`${activeTab === '1' ? '' : 'hidden'}`}>
             <div className={`MarketPlace-NftContainer__box `}>
-              {results.length > 0 &&
+              {results?.length > 0 &&
                 results.map((item) => {
                   // if (dataUser?.id !== item.user.id) {
                   return (

@@ -32,7 +32,7 @@ const TrendingCollection = () => {
 
     dataAllCollection?.results?.forEach((item: any) => {
       const matchedItems = results.filter((NftItem: any) => NftItem.collectionNft.id === item.id);
-      if (matchedItems.length > 0) {
+      if (matchedItems?.length > 0) {
         updatedCollection.push({ collectionP: item, nftP: matchedItems });
       }
     });
