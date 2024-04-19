@@ -1,0 +1,51 @@
+@import '../../../../styles/responsive.scss';
+.trendItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  &-boxImg {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+  &-smalImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: pressUp 0.2s linear forwards;
+    &:hover {
+      animation: pressDown 0.2s linear forwards;
+    }
+  }
+  &-moreNft {
+    padding: 31px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: #a259ff;
+    color: #fff;
+    animation: pressUp 0.2s linear forwards;
+    &:hover {
+      animation: pressDown 0.2s linear forwards;
+    }
+  }
+  &-bigImg {
+    width: 330px;
+    animation: pressUp 0.2s linear forwards;
+    &:hover {
+      animation: pressDown 0.2s linear forwards;
+    }
+
+    @include responsive(mobile) {
+      min-width: 295px;
+      width: 100%;
+    }
+    @include responsive(tablet) {
+      min-width: 295px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.box-area {
+  width: 100%;
+}
+.Tarea {
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  height: 200px;
+  line-height: 1.6;
+  font-family: 'Work Sans';
+}
+
+.Tarea:focus {
+  background-color: #fff;
+}

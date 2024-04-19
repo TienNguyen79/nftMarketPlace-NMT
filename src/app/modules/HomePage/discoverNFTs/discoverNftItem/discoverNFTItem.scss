@@ -1,0 +1,42 @@
+.DiscoverNFTItem {
+  background-color: #3b3b3b;
+  border-radius: 26px;
+  animation: pressUp 0.2s linear forwards;
+  &:hover {
+    animation: pressDown 0.2s linear forwards;
+  }
+  &-body {
+    padding: 20px 30px 25px;
+  }
+  &-bigImg {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    height: 332px;
+  }
+  &-smallImg {
+    width: 24px;
+    height: 24px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  &-author {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    &__name {
+      color: #fff !important;
+    }
+  }
+  &-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__quantity {
+      color: #fff !important;
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/responsive.scss';
+.HowItWork {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  &-box {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 30px;
+    @include responsive(mobile) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      row-gap: 20px;
+    }
+  }
+  &-content {
+    @include responsive(tablet) {
+      font-size: 16px !important;
+    }
+    @include responsive(mobile) {
+      font-size: 16px !important;
+    }
+  }
+}

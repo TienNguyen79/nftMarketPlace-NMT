@@ -1,0 +1,74 @@
+@import '../../styles/responsive.scss';
+.NftPage {
+  &-box {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &-img {
+    height: 500px;
+    image-rendering: pixelated;
+    @include responsive(mobile) {
+      height: 320px;
+    }
+    @include responsive(tablet) {
+      height: 420px;
+    }
+  }
+  &-box {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    column-gap: 150px;
+    @include responsive(tablet) {
+      column-gap: 30px;
+    }
+    @include responsive(mobile) {
+      display: unset;
+    }
+  }
+  &-moreNft {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    &__btn {
+      padding: 20px 50px;
+
+      @include responsive(mobile) {
+        display: none;
+      }
+      &--mobile {
+        display: none;
+        @include responsive(mobile) {
+          display: block;
+          padding: 20px 50px;
+          margin-top: 30px;
+          display: flex;
+        }
+      }
+    }
+    &-collection {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 30px;
+      row-gap: 60px;
+      @include responsive(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 30px;
+      }
+      @include responsive(tablet) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+      }
+    }
+  }
+  &-countDown {
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+}

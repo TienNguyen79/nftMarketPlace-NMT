@@ -1,0 +1,82 @@
+@import '../../styles/responsive.scss';
+.Ranking {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  &-id {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #858585;
+    font-family: 'Space Mono';
+  }
+  &-artist {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    text-decoration: none;
+    &__img {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      overflow: hidden;
+      @include responsive(mobile) {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+      }
+    }
+  }
+  &-text {
+    color: #fff;
+    @include responsive(mobile) {
+      font-size: 12px !important;
+    }
+  }
+  &-text2 {
+    color: #00ac4f;
+  }
+  &-change {
+    @include responsive(tablet) {
+      display: none;
+    }
+    @include responsive(mobile) {
+      display: none;
+    }
+    &__content {
+      @include responsive(tablet) {
+        display: none;
+      }
+      @include responsive(mobile) {
+        display: none;
+      }
+    }
+  }
+  &-NFTSold {
+    // @include responsive(tablet) {
+    //   display: none;
+    // }
+    @include responsive(mobile) {
+      display: none;
+    }
+    &__content {
+      // @include responsive(tablet) {
+      //   display: none;
+      // }
+      @include responsive(mobile) {
+        display: none;
+      }
+    }
+  }
+  &-nameNFT {
+    @include responsive(mobile) {
+      font-size: 16px !important;
+    }
+    @include responsive(tablet) {
+      font-size: 22px !important;
+    }
+  }
+}

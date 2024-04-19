@@ -1,0 +1,62 @@
+@import '../../styles/responsive.scss';
+.tabs {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #3b3b3b;
+  &-item {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    cursor: pointer;
+    // border-bottom: 2px solid #858584;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 50px;
+
+    @include responsive(tablet) {
+      padding: 20px 40px;
+    }
+    @include responsive(mobile) {
+      padding: 20px 4px;
+    }
+
+    &__title {
+      color: var(--caption-label-text, #858584);
+      text-align: center;
+      /* H5 - Work Sans */
+      font-family: 'Work Sans';
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 30.8px */
+      text-transform: capitalize;
+
+      @include responsive(mobile) {
+        font-size: 16px;
+      }
+    }
+    &__quantity {
+      display: flex;
+      padding: 5px 10px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 20px;
+      background-color: #3b3b3b;
+      color: #fff;
+      @include responsive(mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+.active {
+  border-bottom: 2px solid #858584;
+  .tabs-item__title {
+    color: #fff;
+  }
+  .tabs-item__quantity {
+    background-color: #858584;
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../../app/styles/dependencies/index.scss';
+
+.box-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.Tinput {
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  font-family: 'Work Sans';
+  border: none;
+}
+.Tinput:focus {
+  background-color: #fff;
+}
+
+.inputType-Primary {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.inputType-Search {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.inputType-Error {
+  display: block;
+  margin-top: 6px;
+  margin-left: 8px;
+  color: rgb(167, 16, 16);
+}
+
+.inputType-btn {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+.inputType-eye {
+}
+.pl-text {
+  padding-left: 48px;
+}
+.pr-text {
+  padding-right: 48px;
+}

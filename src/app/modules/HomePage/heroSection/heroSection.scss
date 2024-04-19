@@ -1,0 +1,78 @@
+@import '../../../styles/responsive.scss';
+.heroSection {
+  display: flex;
+  align-items: start;
+  column-gap: 30px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include responsive(mobile) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  justify-content: center;
+  &-title {
+    @include responsive(tablet) {
+      font-size: 38px;
+    }
+    @include responsive(mobile) {
+      font-size: 28px;
+    }
+  }
+  &-content {
+    margin-top: 20px;
+    @include responsive(tablet) {
+      font-size: 16px;
+    }
+    @include responsive(mobile) {
+      font-size: 16px;
+    }
+  }
+  &-box {
+    width: 510px;
+    // display: flex;
+    // flex-direction: column;
+    // row-gap: 20px;
+  }
+  &-btn {
+    // width: 510px;
+    padding: 20px 50px;
+    margin: 30px 0;
+    @include responsive(mobile) {
+      width: 100%;
+    }
+  }
+  &-overview {
+    display: flex;
+    column-gap: 50px;
+    @include responsive(mobile) {
+      justify-content: center;
+    }
+    &__item__label {
+      @include responsive(mobile) {
+        font-size: 16px;
+      }
+      @include responsive(tablet) {
+        font-size: 16px;
+      }
+    }
+  }
+  &-image {
+    width: 540px;
+
+    @include responsive(tablet) {
+      width: 490px;
+      height: 360px;
+    }
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+  &-imageMobile {
+    display: none;
+    padding: 40px 0 0;
+    width: 312px;
+    @include responsive(mobile) {
+      display: block;
+    }
+  }
+}

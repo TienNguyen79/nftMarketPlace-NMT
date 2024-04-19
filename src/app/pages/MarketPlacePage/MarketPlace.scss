@@ -1,0 +1,60 @@
+@import '../../styles/responsive.scss';
+.MarketPlace {
+  &-head {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    &__content {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      @include responsive(tablet) {
+        font-size: 16px;
+      }
+      @include responsive(mobile) {
+        font-size: 16px;
+      }
+    }
+    &__input {
+      width: 100%;
+      background-color: transparent;
+      padding-top: 19px;
+      padding-bottom: 19px;
+      border: 1px solid #3b3b3b;
+      color: #858584;
+    }
+  }
+  &-NftContainer {
+    background-color: #3b3b3b;
+    &__box {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 30px;
+      padding-top: 80px;
+      padding-bottom: 40px;
+      @include responsive(tablet) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+      }
+      @include responsive(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 30px;
+      }
+    }
+    border: 2px solid #2b2b2b;
+  }
+  &-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 30px 0;
+    padding-bottom: 40px;
+    padding-top: 30px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.showI {
+  display: block;
+}

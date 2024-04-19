@@ -1,0 +1,199 @@
+@import './variables.scss';
+
+.fix-icon {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+.priBtn {
+  background-color: $primary;
+  color: $color-white;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.seconBtn {
+  border: 2px solid $primary;
+  background-color: transparent;
+  border-radius: 20px;
+  color: $color-white;
+  font-weight: 600;
+}
+
+.ghostBtn {
+  background-color: #fff;
+  color: #2b2b2b;
+  font-weight: 600;
+}
+
+//size
+@mixin size($size) {
+  font-size: $size;
+}
+
+@for $i from 1 through 100 {
+  .size#{$i} {
+    @include size(#{$i}px);
+  }
+}
+
+.pb60 {
+  padding-bottom: 60px;
+}
+.pb48 {
+  padding-bottom: 48px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.bg2b {
+  background-color: $color-2b;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.bg3b {
+  background-color: $color-3b;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.bg85 {
+  background-color: $color-85;
+  // border-bottom-left-radius: 20px;
+  // border-bottom-right-radius: 20px;
+}
+
+.mb80 {
+  margin-bottom: 80px;
+}
+.mb15 {
+  margin-bottom: 15px;
+}
+.text-center {
+  text-align: center;
+}
+
+// .hidden {
+//   display: none;
+// }
+
+//format cho reactquill
+.entry-content,
+.entry-content .ql-snow .ql-editor {
+  font-size: 16px;
+  h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  p {
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  ul,
+  ol {
+    margin-left: 30px;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  figure {
+    margin-bottom: 20px;
+  }
+  img {
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #6b6b6b;
+  }
+  p {
+    margin-bottom: 16px;
+  }
+  em {
+    font-style: italic;
+  }
+  strong {
+    font-weight: 700;
+  }
+  @media screen and (max-width: 1023.98px) {
+    font-size: 14px;
+    h2 {
+      font-size: 26px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+  }
+}
+.ql-editor {
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  font-family: 'Work Sans';
+}
+
+// pagination
+.ant-pagination {
+  .ant-pagination-item {
+    a {
+      color: white;
+      font-size: 18px;
+    }
+  }
+  .ant-pagination-item-active {
+    a {
+      color: #a259ff;
+      font-size: 18px;
+    }
+    &:hover {
+      a {
+        color: #a259ff;
+        opacity: 80;
+      }
+      border: 2px solid #a259ff;
+    }
+    border: 2px solid #a259ff;
+  }
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      color: white;
+    }
+  }
+}

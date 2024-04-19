@@ -1,0 +1,11 @@
+@import '../../../styles/responsive.scss';
+
+.layoutOtion {
+  padding: 0 210px;
+  @include responsive(mobile) {
+    padding: 0 35px;
+  }
+  @include responsive(tablet) {
+    padding: 0 72px;
+  }
+}

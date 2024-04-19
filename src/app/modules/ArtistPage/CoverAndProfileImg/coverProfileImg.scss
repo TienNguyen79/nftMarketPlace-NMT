@@ -1,0 +1,23 @@
+@import '../../../styles/responsive.scss';
+.CoverProfileImg {
+  position: relative;
+  &-cover {
+    height: 350px;
+  }
+  &-avatar {
+    position: absolute;
+    bottom: -60px;
+    left: 210px;
+    width: 120px;
+    border: 2px solid #3b3b3b;
+    border-radius: 20px;
+    overflow: hidden;
+    @include responsive(tablet) {
+      left: 72px;
+    }
+    @include responsive(mobile) {
+      transform: translateX(70%);
+      left: 70px;
+    }
+  }
+}

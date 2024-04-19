@@ -1,0 +1,95 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/responsive.scss';
+.topCreatorItem {
+  height: 242px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-3b;
+  border-radius: 20px;
+
+  animation: pressUp 0.2s linear forwards;
+  &:hover {
+    animation: pressDown 0.2s linear forwards;
+  }
+
+  @include responsive(mobile) {
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    height: unset;
+  }
+  @include responsive(tablet) {
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    height: unset;
+  }
+  &-title {
+    margin-top: 20px;
+    text-align: center;
+    @include responsive(tablet) {
+      font-size: 20px !important;
+      text-align: start;
+    }
+    @include responsive(mobile) {
+      font-size: 18px !important;
+      text-align: start;
+    }
+  }
+  &-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    @include responsive(tablet) {
+      width: 60px;
+      height: 60px;
+    }
+    @include responsive(mobile) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &-quantity {
+    position: absolute;
+    top: 28px;
+    left: 26px;
+    background-color: $color-2b;
+    color: #858584;
+    font-family: 'Space Mono';
+    font-weight: 400;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include responsive(tablet) {
+    }
+    @include responsive(mobile) {
+    }
+  }
+  &-total {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    &__sale {
+      color: #858584 !important;
+    }
+    &__number {
+      color: #fff !important;
+      @include responsive(tablet) {
+        font-size: 14px !important;
+      }
+      @include responsive(mobile) {
+        font-size: 14px !important;
+      }
+    }
+  }
+}

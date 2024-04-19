@@ -1,0 +1,13 @@
+@import '../../../styles/responsive.scss';
+.title {
+  font-family: 'Work Sans';
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  @include responsive(mobile) {
+    font-size: 28px !important;
+  }
+  @include responsive(tablet) {
+    font-size: 28px !important;
+  }
+}

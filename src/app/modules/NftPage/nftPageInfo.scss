@@ -1,0 +1,106 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+.NftPageInfo {
+  @include responsive(tablet) {
+    width: 365px;
+  }
+  @include responsive(mobile) {
+    margin-top: 40px;
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 30px;
+
+    &-smallBox__label {
+      color: #858584;
+
+      /* H5 - Space Mono */
+      font-family: 'Space Mono';
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+    }
+    &-smallBox2__img {
+      width: 24px;
+      height: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    &-small__Content {
+      width: 550px;
+      color: #fff;
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 35.2px */
+      text-transform: capitalize;
+      &Text {
+        font-size: 22px !important;
+        @include responsive(mobile) {
+          font-size: 16px !important;
+        }
+      }
+      @include responsive(tablet) {
+        width: 365px;
+        line-height: 1.5;
+      }
+      @include responsive(mobile) {
+        width: unset;
+      }
+    }
+    &-smallBox2 {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      margin-top: 10px;
+      &.boxTag {
+        @include responsive(mobile) {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          row-gap: 10px;
+        }
+        @include responsive(tablet) {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          row-gap: 10px;
+        }
+      }
+
+      &__btn {
+        padding: 10px 30px;
+        background-color: $color-3b;
+        border-radius: 20px;
+        color: #fff;
+
+        text-align: center;
+        font-family: 'Work Sans';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 22.4px */
+        text-transform: uppercase;
+        margin-top: 10px;
+      }
+    }
+  }
+  &-head__create {
+    color: $color-85;
+    margin-top: 10px;
+  }
+  &-countDown--mobile {
+    display: none;
+    @include responsive(mobile) {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

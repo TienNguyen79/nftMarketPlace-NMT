@@ -1,0 +1,73 @@
+@import '../../../styles/responsive.scss';
+.Subscribe {
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  align-items: start;
+  column-gap: 80px;
+  margin-bottom: 80px;
+  @include responsive(mobile) {
+    flex-direction: column;
+  }
+  @include responsive(tablet) {
+    padding: 40px 30px;
+    column-gap: 30px;
+  }
+  @include responsive(mobile) {
+    padding: 0;
+
+    background-color: transparent;
+  }
+  &-box {
+    @include responsive(mobile) {
+      margin-top: 30px;
+    }
+  }
+  &-title {
+    @include responsive(mobile) {
+      font-size: 28px;
+    }
+    @include responsive(tablet) {
+      font-size: 28px;
+    }
+  }
+  &-img {
+    width: 425px;
+    @include responsive(tablet) {
+      width: 379px;
+      height: 287px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    @include responsive(mobile) {
+      width: unset;
+    }
+  }
+  &-content {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    @include responsive(mobile) {
+      font-size: 16px;
+    }
+    @include responsive(tablet) {
+      font-size: 16px;
+    }
+  }
+  @include responsive(mobile) {
+    .inputType-btn {
+      position: unset !important;
+      transform: translateY(0) !important;
+    }
+  }
+  @include responsive(tablet) {
+    .inputType-btn {
+      position: unset !important;
+      transform: translateY(0) !important;
+      margin-top: 16px;
+    }
+  }
+  .inputType-btn button {
+    width: 100%;
+  }
+}

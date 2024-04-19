@@ -1,0 +1,138 @@
+@import '../../../styles/responsive.scss';
+.CreateNft {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: start;
+  column-gap: 60px;
+
+  @include responsive(mobile) {
+    flex-direction: column;
+  }
+  @include responsive(tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    &__input {
+      padding: 15px 20px;
+      width: 100%;
+    }
+    &__dropDown {
+      width: 100%;
+    }
+  }
+  &-preview {
+    flex: 1;
+    &__btn {
+      padding: 20px 30px;
+      width: 100%;
+      margin-top: 20px;
+    }
+    @include responsive(mobile) {
+      margin-top: 20px;
+    }
+    @include responsive(tablet) {
+      margin-top: 30px;
+    }
+  }
+  &-image {
+    width: 100%;
+    height: 300px;
+    margin-right: 20px;
+  }
+  &-reactQuill {
+    background-color: #fff;
+    border-radius: 11px;
+    overflow: hidden;
+    max-width: 665px;
+    height: 300px;
+  }
+  &-tag {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    column-gap: 20px;
+    @include responsive(mobile) {
+      flex-direction: column-reverse;
+    }
+
+    &__input {
+      padding: 10px 20px;
+      margin: 5px 0;
+      @include responsive(mobile) {
+        width: 100%;
+      }
+    }
+    &__btn {
+      padding: 10px 20px;
+    }
+    &__boxInput {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      outline: none;
+      column-gap: 10px;
+      @include responsive(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 10px;
+      }
+    }
+    &__boxBtn {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      @include responsive(mobile) {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.ant-select-selector {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+
+  outline: none;
+  font-family: 'Work Sans';
+  line-height: 40px;
+}
+.ant-select-selection-item {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 45px !important;
+  outline: none;
+  font-family: 'Work Sans';
+}
+.ant-select-selection-search-input {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+
+  outline: none;
+  font-family: 'Work Sans';
+}
+
+.ant-select-selector {
+  height: 45px !important;
+  border-radius: 20px !important;
+  cursor: pointer;
+}
+.ant-select-selector {
+  padding: 0 20px !important;
+}
+.ant-select-selection-search-input {
+  padding: 0 10px !important;
+  line-height: 41px !important;
+  height: 100% !important;
+}
+
+.ant-select-selection-placeholder {
+  line-height: 41px !important;
+}

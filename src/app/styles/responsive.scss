@@ -1,0 +1,21 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media only screen and (min-width: 1025px) {
+      @content;
+    }
+  } @else if $breakpoint == large-desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @warn "Không tìm thấy breakpoint: #{$breakpoint}. Sử dụng 'mobile', 'tablet', 'desktop', hoặc 'large-desktop'.";
+  }
+}

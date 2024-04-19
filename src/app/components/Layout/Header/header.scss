@@ -1,0 +1,193 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/responsive.scss';
+.header {
+  padding: 20px 50px;
+  @include responsive(mobile) {
+    padding: 20px 30px;
+  }
+  &-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &Sub {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-img {
+    @include responsive(mobile) {
+      height: 24px;
+    }
+    @include responsive(tablet) {
+      height: 24px;
+    }
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+  &-nameNav {
+    text-decoration: none;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &-btn {
+    padding: 0px 30px;
+    height: 60px;
+    margin-left: 30px;
+    @include responsive(mobile) {
+      display: none !important;
+    }
+    @include responsive(tablet) {
+      display: none !important;
+    }
+  }
+  &-myself {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    column-gap: 5px;
+    position: relative;
+    @include responsive(mobile) {
+      display: none !important;
+    }
+    @include responsive(tablet) {
+      display: none !important;
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+      column-gap: 6px;
+    }
+    // background-color: $primary;
+    &__img {
+      width: 30px;
+      height: 30px;
+      border: 2px solid $primary;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    &__name {
+      color: $primary;
+      font-family: monospace;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  &-popUp {
+    position: absolute;
+    background-color: #fff;
+    top: calc(100% + 16px);
+    right: 0px;
+    padding: 18px 24px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 1px 3px 4px $color-85;
+    z-index: 10;
+    &__divider {
+      width: 100%;
+      height: 1px;
+      background-color: #f2f2f2;
+    }
+    &__nameNav {
+      cursor: pointer;
+      padding-top: 10px;
+      &__spe {
+        padding: 10px 0;
+      }
+      &__spe:hover {
+        padding: 10px 0;
+        color: $primary;
+      }
+    }
+    &__nameNav:hover {
+      color: $primary;
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      padding-bottom: 10px;
+      cursor: default;
+      &__img {
+        width: 50px;
+        height: 50px;
+        // border: 1px solid $primary;
+        // box-shadow: 1px 2px 3px $primary;
+        // border-radius: 10px;
+        overflow: hidden;
+      }
+    }
+    &__Boxname {
+      &__name {
+        color: $color-3b !important;
+        font-size: 20px;
+      }
+      &__email {
+        color: $color-85 !important;
+        font-size: 12px;
+        text-transform: none !important;
+      }
+    }
+  }
+  &-bars-mobile {
+    cursor: pointer;
+    @include responsive(desktop) {
+      display: none;
+    }
+  }
+  &-overlay {
+    padding: 40px 30px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 200px;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+    &__effect {
+      transform: translateX(0);
+      transition: 0.3s ease-in-out;
+    }
+    &__close {
+      position: absolute;
+      top: 14px;
+      right: 21px;
+      cursor: pointer;
+    }
+    .ant-menu {
+      width: 100% !important;
+      border: none !important;
+    }
+    .ant-menu-submenu-title {
+      height: 100% !important;
+    }
+
+    .ant-menu-title-content {
+      color: #858584;
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%;
+      @include responsive(mobile) {
+        font-size: 16px;
+      }
+      @include responsive(tablet) {
+        font-size: 18px;
+      }
+    }
+  }
+}

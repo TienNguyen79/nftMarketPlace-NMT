@@ -1,0 +1,32 @@
+@import '../../../app/styles/dependencies/index.scss';
+
+.defaultBtn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  animation: pressUp 0.2s linear forwards;
+  &:hover {
+    animation: pressDown 0.2s linear forwards;
+  }
+}
+// .btnY:hover {
+//   animation: pressDown 0.2s linear forwards;
+// }
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.h30 {
+  height: 30px;
+}
+
+.pointer-none {
+  pointer-events: none;
+}

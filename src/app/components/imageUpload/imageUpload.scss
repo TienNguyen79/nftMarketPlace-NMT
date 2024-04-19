@@ -1,0 +1,43 @@
+.imgUpload {
+  display: flex;
+
+  &-showImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  &-label {
+    // width: 100%;
+    // height: 500px;
+    border: 1px solid #ccc;
+    border-style: dashed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &-delete {
+    display: flex;
+    margin-left: 3px;
+    align-items: center;
+    background-color: white;
+
+    border: none;
+    cursor: pointer;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.point-none {
+  pointer-events: none;
+}

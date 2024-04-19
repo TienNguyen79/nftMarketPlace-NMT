@@ -1,0 +1,36 @@
+.BuyNftPage {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  &-container {
+    padding-bottom: 60px;
+    display: flex;
+    align-items: start;
+    column-gap: 80px;
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    flex: 1;
+  }
+  &-btn {
+    padding: 20px 30px;
+    width: 60%;
+    height: 50px;
+  }
+  &-input {
+    padding: 10px 20px;
+    width: 60%;
+    pointer-events: none;
+    pointer-events: none;
+    filter: contrast(0.5);
+  }
+  &-head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  &-finances {
+    color: #a259ff;
+  }
+}

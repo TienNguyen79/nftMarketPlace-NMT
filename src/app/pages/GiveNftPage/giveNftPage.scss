@@ -1,0 +1,25 @@
+@import '../../styles/responsive.scss';
+.GiveNftPage {
+  padding-top: 80px;
+  &-container {
+    padding-bottom: 60px;
+    display: flex;
+    align-items: start;
+    column-gap: 80px;
+    @include responsive(mobile) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    @include responsive(mobile) {
+      width: 100%;
+    }
+  }
+  &-btn {
+    padding: 20px 30px;
+  }
+}

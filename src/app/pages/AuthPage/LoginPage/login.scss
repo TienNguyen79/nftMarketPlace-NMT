@@ -1,0 +1,100 @@
+// @import '../../../styles/variables.scss';
+@import '../../../../app/styles/dependencies/index.scss';
+@import '../../../styles/responsive.scss';
+.SignIn {
+  // min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 60px;
+  @include responsive(tablet) {
+    column-gap: 20px;
+  }
+  @include responsive(mobile) {
+    flex-direction: column-reverse;
+  }
+  &-box {
+    padding: 100px 170px;
+    @include responsive(mobile) {
+      padding: 30px 30px 40px;
+    }
+    @include responsive(tablet) {
+      padding: 80px 0px 80px 40px;
+    }
+  }
+  &-title {
+    @include responsive(mobile) {
+      font-size: 38px;
+    }
+    @include responsive(tablet) {
+      font-size: 38px;
+    }
+  }
+
+  &-content {
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    align-self: stretch;
+    line-height: 35px;
+    color: #fff;
+    width: 460px;
+    @include responsive(mobile) {
+      font-size: 16px;
+      width: 350px;
+    }
+    @include responsive(tablet) {
+      font-size: 16px;
+      width: 325px;
+    }
+  }
+  &-image {
+    width: 708px;
+    @include responsive(tablet) {
+      min-width: 370px;
+      object-fit: cover;
+    }
+    @include responsive(mobile) {
+      height: 252px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    &__item {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 330px;
+    }
+    &__item.btn {
+      margin-top: 15px;
+    }
+    &__foot {
+      display: flex;
+      align-items: center;
+      //   justify-content: start;
+      margin-top: 10px;
+      margin-left: 40px;
+      column-gap: 6px;
+
+      &-text {
+        color: #ccc;
+      }
+      &-link {
+        text-decoration: none;
+        color: #fff;
+      }
+      &-link:hover {
+        color: #a259ff;
+      }
+    }
+  }
+}
+.h50 {
+  height: 50px;
+}

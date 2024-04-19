@@ -1,0 +1,54 @@
+@import '../../styles/responsive.scss';
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px; //khoảng cách giữa các hàng
+
+  thead tr th {
+    border-top: 1px solid #3b3b3b;
+    border-bottom: 1px solid #3b3b3b;
+  }
+
+  thead tr th:first-child {
+    border-left: 1px solid #3b3b3b;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  thead tr th:last-child {
+    border-right: 1px solid #3b3b3b;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  tr th {
+    color: var(--caption-label-text, #858584);
+    /* Base (Body) - Space Mono */
+    font-family: 'Space Mono';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    text-align: left;
+    padding: 12px 20px;
+  }
+  tbody tr td {
+    padding: 12px 20px;
+    text-align: left;
+    vertical-align: middle; //căn cho các phần tử cao bằng nhau
+    @include responsive(mobile) {
+      padding: 12px 10px;
+    }
+  }
+  tbody tr td:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  tbody tr td:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  tbody tr {
+    background-color: #3b3b3b;
+  }
+}

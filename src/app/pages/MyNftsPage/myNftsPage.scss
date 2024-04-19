@@ -1,0 +1,114 @@
+@import '../../styles/responsive.scss';
+.MyNfts {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &-Smallbox {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+  &-content {
+    @include responsive(mobile) {
+      font-size: 16px !important;
+    }
+    @include responsive(tablet) {
+      font-size: 18px !important;
+    }
+  }
+  &-name {
+    @include responsive(mobile) {
+      font-size: 16px !important;
+    }
+    @include responsive(tablet) {
+      font-size: 18px !important;
+    }
+  }
+  &-Smallbox2 {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    row-gap: 8px;
+  }
+  &-text {
+    color: #fff;
+  }
+  &-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    border: 1px solid #3b3b3b;
+    color: #858584;
+  }
+  &-boxAction {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    &__icon {
+      border: 2px solid #fff;
+      padding: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    &__icon:hover {
+      background-color: #a259ff;
+      transition: 0.3s;
+    }
+  }
+  &-pagination {
+    padding: 20px 0;
+  }
+  &-Smallbox--mobile {
+    border: 1px solid #a259ff;
+    padding: 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 20px;
+    &__info {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+  &-table {
+    @include responsive(mobile) {
+      display: none;
+    }
+    &--mobile {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      display: none;
+      @include responsive(mobile) {
+        display: flex;
+      }
+    }
+  }
+}
+
+.ant-switch-checked {
+  background-color: #a259ff !important;
+}
+
+.sweet-name {
+  color: #a259ff;
+  display: block;
+  margin-top: 4px;
+}
